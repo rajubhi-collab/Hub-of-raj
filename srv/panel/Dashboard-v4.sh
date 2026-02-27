@@ -25,20 +25,7 @@ sleep 2
 ###################################################
 # 🔄 UPDATE & INSTALL DEPENDENCIES
 ###################################################
-apt update && apt upgrade -y
-apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
-LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-apt-add-repository universe
-
-curl -fsSL https://packages.sury.org/php/apt.gpg | sudo gpg --dearmor -o /usr/share/keyrings/php.gpg
-echo "deb [signed-by=/usr/share/keyrings/php.gpg] https://packages.sury.org/php/ $VERSION_CODENAME main" \
-| tee /etc/apt/sources.list.d/php.list
-apt update
-apt -y install \
-php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip,redis} \
-mariadb-server nginx tar unzip zip git redis-server make dos2unix cron openssl screen
-
-systemctl enable --now cron
+bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/dashv3/os.sh)
 
 ###################################################
 # 🎼 COMPOSER
