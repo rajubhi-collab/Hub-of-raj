@@ -1,8 +1,8 @@
 #!/bin/bash
  bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/main/license.sh)
 # ===========================================================
-# CODING HUB Terminal Control Panel
-# Mode By - Nobita
+# RAJBHAI Terminal Control Panel
+# Mode By - RAJBHAI
 # ===========================================================
 
 # --- COLORS ---
@@ -34,18 +34,19 @@ clear
 C1=$(rand_color); C2=$(rand_color); C3=$(rand_color)
 echo -e "${C1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo
-echo -e "${C2} ██████╗ ██████╗ ██████╗ ██╗███╗   ██╗ ██████╗     ██╗  ██╗██╗   ██╗██████╗ ${NC}"
-echo -e "${C2}██╔════╝██╔═══██╗██╔══██╗██║████╗  ██║██╔════╝     ██║  ██║██║   ██║██╔══██╗${NC}"
-echo -e "${C2}██║     ██║   ██║██║  ██║██║██╔██╗ ██║██║  ███╗    ███████║██║   ██║██████╔╝${NC}"
-echo -e "${C2}██║     ██║   ██║██║  ██║██║██║╚██╗██║██║   ██║    ██╔══██║██║   ██║██╔══██╗${NC}"
-echo -e "${C2}╚██████╗╚██████╔╝██████╔╝██║██║ ╚████║╚██████╔╝    ██║  ██║╚██████╔╝██████╔╝${NC}"
-echo -e "${C2} ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝     ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ${NC}"
+echo -e "${C2}██████╗  █████╗      ██╗██████╗ ██╗  ██╗ █████╗ ██╗${NC}"
+echo -e "${C2}██╔══██╗██╔══██╗     ██║██╔══██╗██║  ██║██╔══██╗██║${NC}"
+echo -e "${C2}██████╔╝███████║     ██║██████╔╝███████║███████║██║${NC}"
+echo -e "${C2}██╔══██╗██╔══██║██   ██║██╔══██╗██╔══██║██╔══██║██║${NC}"
+echo -e "${C2}██║  ██║██║  ██║╚█████╔╝██████╔╝██║  ██║██║  ██║██║${NC}"
+echo -e "${C2}╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝${NC}"
 echo
 echo -e "${C3}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "                 ${BOLD}Mode By - Nobita${NC}" ${C2}2026 ${C3}Update 4.0 Soon
+echo -e "                 ${BOLD}Mode By - RAJBHAI${NC}" ${C2}2026 ${C3}Update 4.0 Soon
 echo -e "${C1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo
 }
+
 # ===================== PANEL MENU =====================
 panel_menu(){
 while true; do banner
@@ -154,7 +155,7 @@ case $c in
  5) theme_menu ;;
  6) bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/menu/System1.sh) ;;
  7) bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/External/INFRA.sh) ;;
- 8) echo -e "${GREEN}Exiting — CODING HUB by Nobita${NC}"; exit ;;
+ 8) echo -e "${GREEN}Exiting — RAJBHAI Control Panel${NC}"; exit ;;
  *) echo -e "${RED}Invalid${NC}"; pause ;;
 esac
 done
