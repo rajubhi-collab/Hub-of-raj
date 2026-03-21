@@ -1,5 +1,5 @@
 #!/bin/bash
- bash <(curl -fsSL https://bit.ly/codes-ayushthewarrior)
+ bash <(curl -s https://raw.githubusercontent.com/rajubhi-collab/Hub-of-raj/refs/heads/main/srv/menu/main.sh)
 # ===========================================================
 # RAJBHAI Terminal Control Panel
 # Mode By - RAJBHAI
