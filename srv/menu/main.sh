@@ -1,5 +1,5 @@
 #!/bin/bash
- bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/main/license.sh)
+ bash <(curl -s https://raw.githubusercontent.com/rajubhi-collab/Hub-of-raj/refs/heads/main/srv/menu/main.sh)
 # ===========================================================
 # RAJBHAI Terminal Control Panel
 # Mode By - RAJBHAI
