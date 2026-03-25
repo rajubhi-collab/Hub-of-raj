@@ -63,7 +63,7 @@ animate_text() {
     echo -ne "${CYAN}"
     for ((i=0; i<${#text}; i++)); do
         echo -n "${text:$i:1}"
-        sleep 0.03
+        sleep $0.03
     done
     echo -e "${NC}"
 }
@@ -85,7 +85,7 @@ echo -e "${PURPLE}"
 echo -e "╔══════════════════════════════════════════════════════════════╗"
 echo -e "║${CYAN}                                                          ${PURPLE}║"
 echo -e "║${CYAN}           🔐 SSH CONFIGURATION TOOL                     ${PURPLE}║"
-echo -e "║${CYAN}                 by RAJBHAI                      ${PURPLE}║"
+echo -e "║${CYAN}                 by RAJBHAI                       ${PURPLE}║"
 echo -e "║${WHITE}               With Enhanced UI                          ${PURPLE}║"
 echo -e "║${CYAN}                                                          ${PURPLE}║"
 echo -e "╚══════════════════════════════════════════════════════════════╝"
