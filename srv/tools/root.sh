@@ -187,7 +187,7 @@ echo -e "  ${CYAN}•${NC} ${WHITE}Monitor SSH access logs regularly${NC}"
 echo -e ""
 
 echo -e "${PURPLE}${BOLD}╔══════════════════════════════════════════════════════════════╗${NC}"
-echo -e "${PURPLE}${BOLD}║${WHITE}           Thank you for using Nobita-hosting!           ${PURPLE}║${NC}"
+echo -e "${PURPLE}${BOLD}║${WHITE}           Thank you for using RAJBHAI CMD!           ${PURPLE}║${NC}"
 echo -e "${PURPLE}${BOLD}╚══════════════════════════════════════════════════════════════╝${NC}"
 
 # Enhanced wait for user with better styling
