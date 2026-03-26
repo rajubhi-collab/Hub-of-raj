@@ -1,5 +1,5 @@
 #!/bin/bash
-bash <(curl -s https://raw.githubusercontent.com/rajubhi-collab/ptero/refs/heads/main/ptero/main/license.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/rajubhi-collab/ptero/refs/heads/main/ptero/main/license.sh)
 # ===========================================================
 # RAJBHAI Terminal Control Panel
 # Mode By - RAJBHAI
